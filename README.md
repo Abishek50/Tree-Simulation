@@ -578,23 +578,6 @@ The button handler, and the place where the whole chain runs.
 
 The last two lines create an `App` and start Tk's event loop, which waits for clicks and key presses until the window closes.
 
-## Command-line version: `lsystem_tree.py`
-
-The same program without a window. It reuses the same `expand`, `final_length` and `interpret` functions, so the pictures are identical. It asks for everything through prompts in the terminal, and pressing Enter keeps the default shown in brackets.
-
-| Function | What it does |
-|---|---|
-| `draw(segments, depths, title)` | Like the GUI's `draw`, but it creates its own matplotlib figure and returns it. |
-| `ask(prompt, default, cast)` | Asks until the answer converts with `cast`. Enter keeps the default. |
-| `non_negative_int(text)` | Converter for the iterations prompt. Rejects negatives. |
-| `angle_value(text)` | Converter for the angle prompt. Rejects anything outside -360 to 360, including `nan` and `inf`. |
-| `parse_rule(line)` | Same as in the GUI version. |
-| `ask_rules()` | Reads rules one line at a time until a blank line. A bad rule is explained and asked for again. |
-| `get_settings()` | Prints the numbered presets, then asks for the axiom, rules, angle and iterations. Choosing a preset only asks for angle and iterations. |
-| `main()` | Loops: ask, check the size, grow, draw, then ask whether to grow another tree. |
-
-Two differences from the GUI: the size limit is 2,000,000 symbols instead of 1,000,000, and the iterations are not capped at 12, only by the symbol limit.
-
 ## Known limitations
 
 - **Deterministic and context-free.** The same input always gives the same picture, and each rule replaces one symbol regardless of its neighbors. There is no randomness, no parameters on symbols and no context-sensitive rules.
