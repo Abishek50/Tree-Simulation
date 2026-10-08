@@ -29,8 +29,8 @@ Two different ways to grow a tree on screen, in Python with matplotlib:
 | Idea | Branches react to their environment (light, shade, neighbors) | A string is rewritten by rules, then drawn |
 | Randomness | Yes: wobble, side-bud fates, branch angles | None: the same input always gives the same picture |
 | Environment | A point light and a collision grid | None: branches can overlap |
-| You control | Light position, seed, growth constants in the code | Axiom, rules, angle, iterations, typed in the window |
-| Good for | Seeing how light shapes a tree | Quickly designing and exploring tree shapes from rules |
+| Controls | Light position, seed, growth constants in the code | Axiom, rules, angle, iterations, typed in the window |
+| Use cases | Seeing how light shapes a tree | Quickly designing and exploring tree shapes from rules |
 
 ## Requirements
 
